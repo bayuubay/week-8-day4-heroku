@@ -35,8 +35,9 @@ const mongo = {
     app.use(express.json());
     app.use(express.urlencoded({extended:true}))
 
-    app.get('/', (req, res) => {
-        res.send("<h1>HELLO,WELCOME TO MY VERY FIRST WEBSITE</h1>")
+    app.get('/', async (req, res) => {
+        const data=await MovieModels.find({})
+        res.json({message:"here's what we got for you",data})
     })
     app.post('/movies', async (req, res) => {
         const data = req.body
