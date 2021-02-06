@@ -38,7 +38,7 @@ const mongo = {
     app.get('/', async (req, res) => {
         // const data=await MovieModels.find({})
         // res.json({message:"here's what we got for you",data})
-        res.send("<h1>Hi LUCIA FEBRIYANI SUBARJO, LOVE YOU FULL</h1>")
+        res.send("<h1>HELLO WORLD, THIS IS MY VERY FIRST RUNNING WEB APPLICATION</h1>")
     })
     app.post('/movies', async (req, res) => {
         const data = req.body
